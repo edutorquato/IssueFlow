@@ -22,6 +22,8 @@ var key = Encoding.ASCII.GetBytes(
     builder.Configuration["Jwt:Key"]!
 );
 
+builder.Services.AddHttpClient<JiraService>();
+
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 

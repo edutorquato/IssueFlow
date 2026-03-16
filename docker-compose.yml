@@ -1,5 +1,3 @@
-version: '3.9'
-
 services:
 
   sqlserver:
@@ -14,7 +12,9 @@ services:
       - sql_data:/var/opt/mssql
 
   api:
-    build: .
+    build:
+      context: ./IssueFlowApi
+      dockerfile: Dockerfile
     container_name: issueflow-api
     ports:
       - "5176:8080"
