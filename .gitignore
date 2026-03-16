@@ -1,0 +1,9 @@
+# Ignorar arquivos de ambiente
+.env
+
+# Ignorar bin/obj
+**/bin/
+**/obj/
+
+# Node modules (se houver frontend)
+**/node_modules/

@@ -8,7 +8,7 @@ public class JiraService
 
 	private const string BASE_URL = "https://eduardotorquato2013.atlassian.net";
 	private const string EMAIL = "eduardotorquato2013@gmail.com";
-	private const string TOKEN = "ATATT3xFfGF0lI1BDIX4i9DJrb3WMs7Rx8TzuYCGeKPVwCtXckML-pyBagppJttQ7i0GSgmZ6y-vAZ2fGoZU-EJagjm0zmuEsWZRgWOLBCr58mpfkahftGyAJ6Gn5ofUxUgdI4feI_fwOB9pOA3A4Es1kR-2L4fjw6y_8o9PSxa-wEQzyzarnF8=E8C5F0C1";
+	private const string TOKEN = Environment.GetEnvironmentVariable("JIRA_API_TOKEN") ?? "";
 
 	public JiraService(HttpClient http)
 	{
