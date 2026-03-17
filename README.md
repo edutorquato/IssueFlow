@@ -1,8 +1,14 @@
 # 🚀 IssueFlow
 
-**IssueFlow** é um sistema moderno de gerenciamento de issues desenvolvido para demonstrar boas práticas de desenvolvimento **Full Stack** utilizando **.NET**, **Vue.js**, **Docker** e **SQL Server**.
+**IssueFlow** é um sistema de gerenciamento de issues desenvolvido para demonstrar uma arquitetura moderna **Full Stack**, utilizando **.NET**, **Vue.js**, **Docker** e **SQL Server**.
 
-O projeto simula a arquitetura de um sistema SaaS real, com autenticação JWT, API REST segura, banco de dados containerizado e frontend desacoplado.
+O projeto simula um cenário real de aplicação SaaS, com:
+
+- API REST segura
+- Autenticação via JWT
+- Frontend desacoplado
+- Banco de dados containerizado
+- Estrutura preparada para crescimento
 
 ---
 
@@ -14,25 +20,26 @@ O projeto simula a arquitetura de um sistema SaaS real, com autenticação JWT, 
 
 # 🧰 Tech Stack
 
-## Backend
+## 🔹 Backend
 - ASP.NET Core 8
 - Entity Framework Core
 - JWT Authentication
 - SQL Server
 - Swagger
 
-## Frontend
+## 🔹 Frontend
 - Vue 3
 - Vue Router
 - Vite
 
-## DevOps
+## 🔹 DevOps
 - Docker
 - Docker Compose
 
 ---
 
 # 🏗️ Arquitetura do Projeto
+
 
 IssueFlow
 │
@@ -54,49 +61,127 @@ IssueFlow
 └── docker-compose.yml
 
 
-O backend segue uma estrutura modular simples baseada em **Controllers + Entity Framework**, permitindo evolução futura para arquiteturas mais complexas como **Clean Architecture** ou **DDD**.
+O backend segue uma estrutura modular baseada em **Controllers + Entity Framework**, com possibilidade de evolução para **Clean Architecture** ou **DDD**.
 
 ---
 
 # 🔐 Autenticação
 
-A autenticação é baseada em **JWT (JSON Web Token)**.
+A autenticação é feita via **JWT (JSON Web Token)**.
 
-Fluxo:
+### Fluxo:
 
-1️⃣ Usuário realiza login  
-2️⃣ API valida as credenciais  
-3️⃣ Token JWT é gerado  
-4️⃣ O frontend envia o token nas requisições protegidas
+1. Usuário realiza login  
+2. API valida credenciais  
+3. Token JWT é gerado  
+4. Frontend envia o token nas requisições protegidas  
 
-Header esperado:
+### Header esperado:
+
 
 Authorization: Bearer {token}
 
 
 ---
 
-# 🐳 Rodando o Projeto com Docker
+# 🐳 Como rodar o projeto
 
-### 1️⃣ Clonar o repositório
+## 🔧 Pré-requisitos
+
+- Docker instalado
+- Docker Compose
+
+---
+
+## ▶️ Subindo o ambiente
+
+Clone o repositório:
 
 ```bash
 git clone https://github.com/seu-usuario/issueflow.git
-
 cd issueflow
 
+Suba os containers:
+
 docker compose up --build
+🚀 Serviços disponíveis
 
-issueflow-api
-issueflow-sql
+Após subir o projeto:
 
+🔹 API (.NET)
 http://localhost:5176/swagger
-
-Configuração padrão:
-
-Server: localhost
+🔹 Banco de dados (SQL Server)
+Host: localhost
 Port: 1433
 User: sa
 Password: YourStrong!Pass123
 Database: IssueFlowDb
+🧪 Principais funcionalidades
 
+✔ Autenticação JWT
+
+✔ API protegida
+
+✔ Integração Vue + .NET
+
+✔ Banco SQL Server via Docker
+
+✔ Documentação com Swagger
+
+📌 Próximos passos (Roadmap)
+
+ CRUD completo de Issues
+
+ Gestão de usuários
+
+ Sistema de permissões (roles)
+
+ Dashboard com métricas
+
+ Deploy em cloud
+
+👨‍💻 Autor
+
+Eduardo
+
+Desenvolvedor com foco em backend, arquitetura e aplicações escaláveis.
+
+⭐ Objetivo
+
+Este projeto foi criado com foco em:
+
+Demonstrar boas práticas em .NET
+
+Trabalhar com frontend desacoplado
+
+Utilizar Docker no fluxo de desenvolvimento
+
+Simular um ambiente real de aplicação SaaS
+
+📄 Licença
+
+MIT
+
+
+---
+
+# 🔥 O que melhoramos (isso é o que recrutador percebe)
+
+- Organização visual (muito importante)
+- Separação clara de responsabilidades
+- Seção “Como rodar” bem objetiva
+- Linguagem mais profissional (menos “tutorial”, mais “produto”)
+- Estrutura fácil de escanear (quem avalia não lê tudo)
+
+---
+
+# 🚀 Se quiser deixar ainda mais forte
+
+Posso te ajudar a dar o próximo nível:
+
+- adicionar **badges (Docker, .NET, Vue)**
+- criar um **GIF real do sistema funcionando**
+- montar um **diagrama de arquitetura estilo senior**
+- ajustar o README para inglês (isso aumenta MUITO alcance)
+
+Só me fala 👍
